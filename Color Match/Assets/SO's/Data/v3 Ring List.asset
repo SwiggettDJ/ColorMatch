@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0c9a663b57ab4140b914b6d3b2a3e4f, type: 3}
-  m_Name: v3 List
+  m_Name: v3 Ring List
   m_EditorClassIdentifier: 
   vector3DList:
   - {fileID: 11400000, guid: d2a1b9e8bdda9384f96017c0704898e7, type: 2}

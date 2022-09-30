@@ -10,7 +10,7 @@ public class MatchBehaviour : MonoBehaviour
     {
         if (other != null)
         {
-            var tempObj = other.GetComponent<IDContainerBehaviour>();
+            var tempObj = other.GetComponent<MatchBehaviour>();
             if (tempObj == null)
                 yield break;
             var otherID = tempObj.idObj;
