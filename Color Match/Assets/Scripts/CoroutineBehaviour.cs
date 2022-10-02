@@ -13,6 +13,12 @@ public class CoroutineBehaviour : MonoBehaviour
     public float seconds;
     private WaitForFixedUpdate wffuObj;
 
+    public bool CanRun
+    {
+        get => canRun;
+        set => canRun = value;
+    }
+
     private void Start()
     {
         startEvent.Invoke();
@@ -42,7 +48,7 @@ public class CoroutineBehaviour : MonoBehaviour
 
     private IEnumerator RepeatUntilFalse()
     {
-        while (canRun)
+        while (CanRun)
         {
             yield return wfsObj;
             repeatUntilFalseEvent.Invoke();
@@ -51,7 +57,8 @@ public class CoroutineBehaviour : MonoBehaviour
 
     public void StartRepeatUntilFalse()
     {
-        canRun = true;
+        CanRun = true;
         StartCoroutine(RepeatUntilFalse());
     }
+    
 }
