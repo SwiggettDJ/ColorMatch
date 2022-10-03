@@ -1694,7 +1694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 21.899994, y: -57.30002}
+  m_AnchoredPosition: {x: 21.900024, y: -57.30002}
   m_SizeDelta: {x: 92.2, y: 47.6}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1241088498
@@ -1942,7 +1942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 21.9, y: -19.7}
+  m_AnchoredPosition: {x: 21.900024, y: -19.700012}
   m_SizeDelta: {x: 92.2, y: 47.6}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1662791257
@@ -2196,25 +2196,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 116045095}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 11400000, guid: 975d6e35ba88e9a44bfb70dc43dd605a, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 116045097}
-        m_TargetAssemblyTypeName: SpriteBehaviour, Assembly-CSharp
-        m_MethodName: ChangeRendererColor
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 226550f3f5dcde34a9233b982817c5a1, type: 2}
-          m_ObjectArgumentAssemblyTypeName: ColorID, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2872,6 +2860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5041209042652244882}
   - component: {fileID: 5041209042652244883}
+  - component: {fileID: 5041209042652244884}
   m_Layer: 0
   m_Name: 123CountdownCoroutine
   m_TagString: Untagged
@@ -2995,3 +2984,35 @@ MonoBehaviour:
   canRun: 0
   counterNum: {fileID: 11400000, guid: fd9db4ab5855e36468cf79a06f587728, type: 2}
   seconds: 1
+--- !u!114 &5041209042652244884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5041209042652244881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b559f9e0f99d81340b9cbc9d4935ecf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  handlerList:
+  - action: {fileID: 11400000, guid: 975d6e35ba88e9a44bfb70dc43dd605a, type: 2}
+    actionEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5041209042652244883}
+          m_TargetAssemblyTypeName: CoroutineBehaviour, Assembly-CSharp
+          m_MethodName: StartCounting
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
